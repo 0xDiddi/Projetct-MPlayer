@@ -1,0 +1,16 @@
+<resources>
+
+    <string-array name="menu_drawer_items">
+        <item>@string/drw_player</item>
+        <item>@string/drw_lists</item>
+        <item>@string/drw_songs</item>
+    </string-array>
+
+    <string name="app_name">Project MPlayer</string>
+    <string name="drw_player">Current Playback</string>
+    <string name="drw_lists">Playlists</string>
+    <string name="drw_songs">Local Songs</string>
+    <string name="song_name">No Name found</string>
+    <string name="song_artist">No artist found</string>
+    <string name="song_duration">No duration found</string>
+</resources>

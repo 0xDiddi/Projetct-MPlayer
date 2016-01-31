@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Project MPlayer</string>
+    <string name="drw_player">Aktuelle Wiedergabe</string>
+    <string name="drw_lists">Wiedergabelisten</string>
+    <string name="drw_songs">Lokale Songs</string>
+    <string name="song_name">Kein Namen angegeben</string>
+    <string name="song_artist">Kein Interpret angegeben</string>
+    <string name="song_duration">Keine dauer gefunden</string>
+</resources>
