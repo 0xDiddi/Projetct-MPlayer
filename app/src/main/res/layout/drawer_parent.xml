@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorDark"
-        android:paddingTop="50dp"
+        android:paddingTop="25dp"
         android:id="@+id/content_frame"/>
 
     <android.support.v7.widget.RecyclerView

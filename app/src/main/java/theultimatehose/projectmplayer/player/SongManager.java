@@ -3,11 +3,13 @@ package theultimatehose.projectmplayer.player;
 import android.app.Activity;
 import android.media.AudioFormat;
 import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.net.Uri;
 import android.os.Environment;
 import android.util.Log;
 
 import java.io.File;
+import java.io.FileDescriptor;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,9 +18,13 @@ import java.util.HashMap;
 public class SongManager {
 
     public static ArrayList<HashMap<String, String>> getSongs() {
-        File home = Environment.getExternalStorageDirectory();
+        File home1 = new File("/storage/sdcard1/");
+        File home2 = new File("/storage/emulated/0/");
 
-        return searchRecursive(home);
+        ArrayList<HashMap<String, String>> list = searchRecursive(home1);
+        list.addAll(searchRecursive(home2));
+
+        return list;
     }
 
     public static ArrayList<HashMap<String, String>> searchRecursive(File parent) {
@@ -66,18 +72,7 @@ public class SongManager {
         if (tag.substring(0, 3).equals("TAG")) {
             return tag.substring(3, 32);
         }
-        return "";
-    }
-
-    public static int getSongDuration(String path, Activity context) {
-        try {
-            MediaPlayer mp = MediaPlayer.create(context, Uri.parse(path));
-            return mp.getDuration();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return 0;
+        return null;
     }
 
     public static String getSongTag(String path) {
